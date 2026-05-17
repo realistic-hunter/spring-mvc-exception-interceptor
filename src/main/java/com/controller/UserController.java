@@ -30,4 +30,13 @@ public class UserController {
     public String toMain() {
         return "main";
     }
+
+    //制造一个算术异常测试接口
+    @RequestMapping(value="/test", method=RequestMethod.GET)
+    public String test() {
+        int a = 1 / 0;
+        return "main";
+    }
+
 }
+
